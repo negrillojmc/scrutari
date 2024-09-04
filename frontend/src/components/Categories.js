@@ -5,7 +5,7 @@ const Categories = () => {
 
 
   return (
-    <div className='col-span-1 sm:col-span-12 flex flex-wrap items-center justify-center gap-2'>
+    <div className='col-span-12 flex flex-wrap my-4 items-center justify-center gap-2'>
         <button className='bg-black text-white px-4 py-2 rounded-3xl text-sm font-bold'>
             <Link to="/blog">Latest</Link>
         </button>
