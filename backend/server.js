@@ -1,29 +1,20 @@
-require('dotenv').config()
-
-// express app
 const express = require('express')
 const mongoose = require('mongoose')
-const scrutariRoutes = require('./routes/scrutariRoutes')
+const cors = require('cors');
+// const Article = require('./models/article.model.js')
+const myRoutes = require('./routes/scrutari.routes.js')
 const app = express()
 
 // middleware
 app.use(express.json())
-app.use((req, res, next) => {
-    console.log(req.path, req.method)
-    next()
+app.use(cors());
+app.use('/api', myRoutes);
+
+app.listen(2000, () => {
+  console.log('Server running on PORT 2000')
 })
 
-// routes
-app.use('/', scrutariRoutes)
 
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => {
-        app.listen(process.env.PORT, () => {
-            console.log('Listening on port', process.env.PORT)
-        })
-        console.log('The server is now connected to the database.')
-    })
-    .catch((error) => {
-        console.log(error)
-    })
 
+mongoose.connect('mongodb+srv://negrillojmc:DZI67XdiRI8wPX2e@articles.ido6vsf.mongodb.net/articles?retryWrites=true&w=majority&appName=articles')
+  .then(() => console.log('Connected!'));
