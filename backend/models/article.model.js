@@ -12,7 +12,7 @@ const ArticleSchema = mongoose.Schema(
             required: [true, "Please enter article author."],
         },
 
-        content: {
+        preview: {
             type: String,
             required: [true, "Please enter article content."],
         },
@@ -27,9 +27,27 @@ const ArticleSchema = mongoose.Schema(
             default: null,
         },
 
+        featuredVideo: {
+            type: String,
+            default: null,
+        },
+
         category: {
             type: String,
             required: [true, "Please enter article category: Introduction, Literature, Methodology, or Analysis."],
+        },
+
+        sections: {
+            type: 
+                [
+                    {
+                        sectionTitle: String,
+                        passage: String,
+                        examples: [String],
+                        dynamic: Boolean, // Indicate if the content is dynamic
+                        link: String,
+                    }
+                ],
         }
     },
     {
