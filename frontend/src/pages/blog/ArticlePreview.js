@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Tag from '../../components/Tag';
-import moment from 'moment';
+import Tag from "../../components/Tag";
+import moment from "moment";
 import { LuCalendarCheck } from "react-icons/lu";
 import { IoPersonOutline } from "react-icons/io5";
 import { LuClock2 } from "react-icons/lu";

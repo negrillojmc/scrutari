@@ -1,10 +1,12 @@
 import React from "react";
 import TableOfContents from "./TableOfContents";
-import ArticleTemplate from "./ArticleTemplate";
+// import ArticleTemplate from "./ArticleTemplate";
 import AuthorTemplate from "./AuthorTemplate";
 import SocialsDock from "./SocialsDock";
 import BlackLine from "../../components/BlackLine";
 import ReadMore from "./ReadMore";
+import ArticlePreview from "./ArticlePreview";
+import ArticleBody from "./ArticleBody";
 
 const Article = () => {
   return (
@@ -17,7 +19,8 @@ const Article = () => {
           <TableOfContents />
         </div>
         <div className="col-span-3">
-          <ArticleTemplate />
+          <ArticlePreview />
+          <ArticleBody />
         </div>
       </section>
 

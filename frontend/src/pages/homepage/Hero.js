@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div>
       {/* Hero Page */}
-      <section className='p-10 sm:px-20 md:px-28 lg:px-44 grid grid-cols-1 sm:grid-cols-12 xl:mx-60'>
+      <section className='p-10 sm:px-20 md:px-28 lg:px-32 grid grid-cols-1 sm:grid-cols-12 xl:mx-60'>
         <div className='col-span-12 text-md rounded-3xl p-0.5 bg-gradient-to-r from-[#1CB5E0] to-[#000046] mr-auto sm:col-span-7'>
           <h3 className='rounded-[calc(1.5rem-2px)] p-2 bg-white text-center'>
             <h3 className='bg-gradient-to-r inline-block text-transparent bg-clip-text px-2 font-medium'>
