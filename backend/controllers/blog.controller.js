@@ -1,4 +1,7 @@
 const Article = require('../models/article.model');
+const Author = require('../models/author.model')
+
+// --- BLOG CONTROLLERS ---
 
 const getAllArticles = async (req, res) => {
     try {
@@ -58,10 +61,75 @@ const deleteSingleArticle =  async (req, res) => {
     }
 }
 
+// --- AUTHOR CONTROLLERS ---
+
+const getAllAuthors = async (req, res) => {
+    try {
+        const authors = await Author.find({}).sort('name');
+        res.status(200).json(authors);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+const getSingleAuthor = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const author = await Author.findById(id);
+        res.status(200).json(author);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+const addNewAuthor = async (req, res) => {
+    try {
+        const author = await Author.create(req.body);
+        res.sendStatus(200).json(author);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+const updateSingleAuthor = async (req, res) => {
+    try {
+        const {id} = req.params;
+        const author = await Author.findByIdAndUpdate(id, req.body);
+        if (!author) {
+            return res.status(400).json({message: "Article not found"});
+        }
+        
+        const updatedAuthor = await Author.findById(id);
+        res.status(200).json(updatedAuthor);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+const deleteSingleAuthor =  async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const product = await Author.findByIdAndDelete(id);
+
+        if (!product) {
+            return res.status(404).json({ message: 'Author not found.'})
+        }
+
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+}
+
 module.exports = {
     getAllArticles,
     getSingleArticle,
     addNewArticle,
     updateSingleArticle,
-    deleteSingleArticle
+    deleteSingleArticle,
+    getAllAuthors,
+    getSingleAuthor,
+    addNewAuthor,
+    updateSingleAuthor,
+    deleteSingleAuthor
 }
