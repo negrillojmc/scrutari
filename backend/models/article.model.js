@@ -42,13 +42,19 @@ const ArticleSchema = mongoose.Schema(
                 [
                     {
                         sectionTitle: String,
-                        passage: String,
+                        passages: [String],
                         examples: [String],
                         dynamic: Boolean, // Indicate if the content is dynamic
                         link: String,
                     }
                 ],
+        },
+        
+        authorId: {
+            type: String,
+            required: [true, "Please enter the author's ID."],
         }
+
     },
     {
         timestamps: true,
