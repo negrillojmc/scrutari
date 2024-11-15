@@ -8,7 +8,6 @@ const Feed = () => {
 
   const navigate = useNavigate();
 
-
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
