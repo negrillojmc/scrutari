@@ -33,7 +33,7 @@ const ArticleBody = () => {
     <div>
       {article &&
         article.sections.map((section, index) => (
-          <div ref={ref} className="border border-purple-600">
+          <div ref={ref} className="">
             <Element name={section.link} className="element">
               <h2
                 className="font-bold text-2xl mt-12"
@@ -42,6 +42,13 @@ const ArticleBody = () => {
                 {section.sectionTitle}
               </h2>
             </Element>
+            {section.passages.length > 0 && ( // Check if passages array has elements
+              <div>
+                {section.passages.map((passage, i) => (
+                  <p key={i} className="my-2 text-lg text-justify">{passage}</p>
+                ))}
+              </div>
+            )}
             <p className="my-2 text-lg text-justify">{section.passage}</p>
             {section.examples.length > 0 && ( // Check if examples array has elements
               <div className="border border-gray-800 p-6 my-4">
