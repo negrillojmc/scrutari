@@ -1,4 +1,5 @@
 const express = require('express')
+const Article = require('../models/article.model.js')
 const Author = require('../models/author.model.js')
 const router = express.Router();
 const {getAllArticles, getSingleArticle, addNewArticle, updateSingleArticle, deleteSingleArticle, getAllAuthors, getSingleAuthor, addNewAuthor, updateSingleAuthor, deleteSingleAuthor} = require('../controllers/blog.controller.js')
