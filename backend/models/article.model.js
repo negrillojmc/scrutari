@@ -50,10 +50,11 @@ const ArticleSchema = mongoose.Schema(
                 ],
         },
         
-        authorId: {
-            type: String,
+        authorID: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Author",
             required: [true, "Please enter the author's ID."],
-        }
+        },
 
     },
     {
