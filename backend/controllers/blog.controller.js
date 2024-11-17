@@ -15,10 +15,12 @@ const getAllArticles = async (req, res) => {
 const getSingleArticle = async (req, res) => {
     try {
         const { id } = req.params;
-        const article = await Article.findById(id);
+        const article = await Article.findById(id).populate("authorID").exec();
+
         res.status(200).json(article);
-    } catch (error) {
-        res.status(500).json({message: error.message});
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({error: 'Server error, tanga.'});
     }
 }
 
