@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import Article from './Article';
 
-const ReadMore = () => {
+const ReadMore = ({ id }) => {
 
   const navigate = useNavigate();
 
@@ -12,10 +12,15 @@ const ReadMore = () => {
     const fetchArticles = async () => {
       const response = await fetch("http://localhost:2000/api/blog");
       const json = await response.json();
+      const currentArticleId = { id };
+      console.log(currentArticleId);
 
       if (response.ok) {
-        // slice the first four articles from the array
+        // Filter out the articles
+
         const shuffledArticles = json.sort(() => 0.5 - Math.random());
+
+        //Get the first four articles
         const firstFourArticles = shuffledArticles.slice(0, 4);
         setArticles(firstFourArticles);
       }

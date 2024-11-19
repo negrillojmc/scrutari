@@ -12,7 +12,7 @@ const ArticleBody = () => {
     const fetchArticle = async () => {
       const response = await fetch(`http://localhost:2000/api/blog/${id}`);
       const json = await response.json();
-
+      
       if (response.ok) {
         setArticle(json);
       }
@@ -31,6 +31,7 @@ const ArticleBody = () => {
 
   return (
     <div>
+      {/* <ReadMore currentArticleId={id} /> */}
       {article &&
         article.sections.map((section, index) => (
           <div ref={ref} className="">

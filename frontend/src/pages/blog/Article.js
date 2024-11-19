@@ -1,6 +1,5 @@
 import React from "react";
 import TableOfContents from "./TableOfContents";
-// import ArticleTemplate from "./ArticleTemplate";
 import AuthorTemplate from "./AuthorTemplate";
 import SocialsDock from "./SocialsDock";
 import BlackLine from "../../components/BlackLine";

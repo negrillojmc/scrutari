@@ -33,7 +33,7 @@ const Process = () => {
                   </div>
                 </div>
                   <h2 className="mb-2 text-lg font-semibold h-20">Meet and discuss</h2>
-                  <Link to='#' className="text-blue-500 hover:underline">Learn more</Link>
+                  {/* <Link to='#' className="text-blue-500 hover:underline">Learn more</Link> */}
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ const Process = () => {
                 </div>
                 </div>
                   <h2 className="mb-2 text-lg font-semibold h-20">Gather needed info</h2>
-                  <Link to='#' className="text-blue-500 hover:underline">Learn more</Link>
+                  {/* <Link to='#' className="text-blue-500 hover:underline">Learn more</Link> */}
                 </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Process = () => {
                 </div>
                 </div>
                   <h2 className="mb-2 text-lg font-semibold h-20">Write the proposal</h2>
-                  <Link to='#' className="text-blue-500 hover:underline">Learn more</Link>
+                  {/* <Link to='#' className="text-blue-500 hover:underline">Learn more</Link> */}
                 </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ const Process = () => {
                 </div>
                 </div>
                   <h2 className="mb-2 text-lg font-semibold h-20">Seek for approval</h2>
-                  <Link to='#' className="text-blue-500 hover:underline">Learn more</Link>
+                  {/* <Link to='#' className="text-blue-500 hover:underline">Learn more</Link> */}
                 </div>
             </div>
           </div>
