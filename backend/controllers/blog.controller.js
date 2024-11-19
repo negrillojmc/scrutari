@@ -12,6 +12,42 @@ const getAllArticles = async (req, res) => {
     }
 }
 
+const getAllIntroductionArticles = async (req, res) => {
+    try {
+        const articles = await Article.find({ category: "introduction"}).sort('-publishedAt');
+        res.status(200).json(articles);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+const getAllLiteratureArticles = async (req, res) => {
+    try {
+        const articles = await Article.find({ category: "literature"}).sort('-publishedAt');
+        res.status(200).json(articles);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+const getAllMethodologyArticles = async (req, res) => {
+    try {
+        const articles = await Article.find({ category: "methodology"}).sort('-publishedAt');
+        res.status(200).json(articles);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
+const getAllAnalysisArticles = async (req, res) => {
+    try {
+        const articles = await Article.find({ category: "analysis"}).sort('-publishedAt');
+        res.status(200).json(articles);
+    } catch (error) {
+        res.status(500).json({message: error.message});
+    }
+}
+
 const getSingleArticle = async (req, res) => {
     try {
         const { id } = req.params;
@@ -126,6 +162,10 @@ const deleteSingleAuthor =  async (req, res) => {
 module.exports = {
     getAllArticles,
     getSingleArticle,
+    getAllIntroductionArticles,
+    getAllLiteratureArticles,
+    getAllMethodologyArticles,
+    getAllAnalysisArticles,
     addNewArticle,
     updateSingleArticle,
     deleteSingleArticle,

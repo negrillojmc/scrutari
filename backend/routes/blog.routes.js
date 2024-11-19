@@ -2,12 +2,24 @@ const express = require('express')
 const Article = require('../models/article.model.js')
 const Author = require('../models/author.model.js')
 const router = express.Router();
-const {getAllArticles, getSingleArticle, addNewArticle, updateSingleArticle, deleteSingleArticle, getAllAuthors, getSingleAuthor, addNewAuthor, updateSingleAuthor, deleteSingleAuthor} = require('../controllers/blog.controller.js')
+const {getAllArticles, getSingleArticle, getAllIntroductionArticles, getAllLiteratureArticles, getAllMethodologyArticles, getAllAnalysisArticles, addNewArticle, updateSingleArticle, deleteSingleArticle, getAllAuthors, getSingleAuthor, addNewAuthor, updateSingleAuthor, deleteSingleAuthor} = require('../controllers/blog.controller.js')
 
 // --- BLOG MODIFICATION ROUTES ---
 
-// GET All Articles
+// GET All Latest Articles
 router.get('/blog', getAllArticles);
+
+// GET All Introduction Articles
+router.get('/blog/introduction', getAllIntroductionArticles);
+
+// GET All Literature Articles
+router.get('/blog/literature', getAllLiteratureArticles);
+
+// GET All Methodology Articles
+router.get('/blog/methodology', getAllMethodologyArticles);
+
+// GET All Analysis Articles
+router.get('/blog/analysis', getAllAnalysisArticles);
 
 // GET Single Article
 router.get('/blog/:id', getSingleArticle)
