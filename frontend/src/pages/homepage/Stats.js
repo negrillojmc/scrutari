@@ -13,7 +13,7 @@ const Stats = () => {
         <div className='sm:col-span-12 inline-grid sm:grid-cols-6 mt-6'>
           <h3 className='col-span-12 sm:col-span-3 text-center sm:text-left self-center'>Paving the way to your writing journey, one step at a time.</h3>
           <button className='col-span-12 sm:col-span-3 sm:justify-self-end bg-black text-white rounded-3xl px-6 p-3 mt-4 sm:mt-0'>
-            <Link to='#'>Submit a proposal</Link>
+            <Link to='#'>Ask your questions!</Link>
           </button>
         </div>
 
