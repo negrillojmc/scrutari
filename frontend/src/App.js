@@ -4,6 +4,7 @@ import './App.css';
 
 // component imports
 import Home from './pages/Home'
+import About from './pages/About'
 import Library from './pages/Library'
 import Engagement from './pages/Engagement'
 import Navbar from './components/Navbar'
@@ -14,6 +15,7 @@ import LatestFeedStructure from './components/LatestFeedStructure';
 import LiteratureFeedStructure from './components/LiteratureFeedStructure';
 import MethodologyFeedStructure from './components/MethodologyFeedStructure';
 import AnalysisFeedStructure from './components/AnalysisFeedStructure';
+import Paths from './pages/Paths';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/blog/literature" element={<LiteratureFeedStructure />} />
         <Route path="/blog/methodology" element={<MethodologyFeedStructure />} />
         <Route path="/blog/analysis" element={<AnalysisFeedStructure />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/paths" element={<Paths />} />
         <Route path="/library" element={<Library />} />
         <Route path="/engagement" element={<Engagement />} />
         <Route path="/api/blog/:id" element={<Article />} />
