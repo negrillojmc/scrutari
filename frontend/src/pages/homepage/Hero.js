@@ -19,7 +19,7 @@ const Hero = () => {
         <p className='col-span-12 text-sm mt-4 md:inline-grid md:grid-cols-2 lg:grid-cols-2.5'>Ignite positive change by joining a dynamic community where groundbreaking ideas flourish and your contributions have the power to shape a brighter future.</p>
 
         <button className='col-span-12 sm:col-span-3 text-sm mt-10 bg-black text-white rounded-3xl p-3'>
-          <Link to='#'>Explore paths</Link>
+          <Link to='/paths'>Explore paths</Link>
           </button>
         
         <div className='my-10 col-span-12'>
