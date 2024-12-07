@@ -7,5 +7,5 @@ module.exports = {
       colors: {},
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
