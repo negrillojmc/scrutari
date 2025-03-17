@@ -47,8 +47,8 @@ const ResearchAreas = () => {
           </div>
         </div>
 
-        <div className='col-span-1 md:col-span-2 lg:col-span-4 inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-8'>
-          <h1 className="col-span-1 md:col-span-2 lg:col-span-4 font-bold">
+        <div className='col-span-1 md:col-span-2 lg:col-span-4 inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-8 text-center'>
+          <h1 className="col-span-1 md:col-span-2 lg:col-span-4 font-bold text-left">
             Cross Cutting Themes
           </h1>
           <div className="col-span-1 border rounded-xl p-5 flex flex-col justify-center items-center gap-2 text-sm font-medium">

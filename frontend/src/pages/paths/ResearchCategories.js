@@ -39,7 +39,9 @@ const ResearchCategories = () => {
                 </li>
               ))}
           </ul>
-          <ButtonGradient text="Get Started" className=""/>
+          <div className="mt-6">
+            <ButtonGradient text="Get Started" className=""/>
+          </div>
 
         </div>
         <div className="border rounded-3xl col-span-1 p-6 shadow-sm flex flex-col justify-center">
@@ -62,7 +64,9 @@ const ResearchCategories = () => {
                 </li>
               ))}
           </ul>
-          <ButtonGradient text="Get Started" className="" />
+          <div className="mt-6">
+            <ButtonGradient text="Get Started" className="" />
+          </div>
         </div>
       </section>
     </div>
