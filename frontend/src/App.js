@@ -16,6 +16,8 @@ import LiteratureFeedStructure from './components/LiteratureFeedStructure';
 import MethodologyFeedStructure from './components/MethodologyFeedStructure';
 import AnalysisFeedStructure from './components/AnalysisFeedStructure';
 import Paths from './pages/Paths';
+import Process from './pages/Process';
+import Services from './pages/Services';
 
 function App() {
   return (
@@ -29,7 +31,9 @@ function App() {
         <Route path="/blog/methodology" element={<MethodologyFeedStructure />} />
         <Route path="/blog/analysis" element={<AnalysisFeedStructure />} />
         <Route path="/about" element={<About />} />
+        <Route path="/process" element={<Process />} />
         <Route path="/paths" element={<Paths />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/library" element={<Library />} />
         <Route path="/engagement" element={<Engagement />} />
         <Route path="/api/blog/:id" element={<Article />} />
