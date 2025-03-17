@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 import { GiOpenBook } from "react-icons/gi";
 
 const Footer = () => {
@@ -26,17 +26,20 @@ const Footer = () => {
         </div>
 
         <div className="col-span-12 lg:col-span-9 text-center font-bold text-lg my-6 lg:my-0">
-          <div className="lg:inline-grid lg:grid-cols-6 text-center gap-x-6">
+          <div className="grid lg:inline-grid lg:grid-cols-5 text-center gap-x-16">
             <Link to="/about">
-              <h2 className="mt-6 mx-auto lg:my-0">About</h2>
+              <h2 className="col-span-1 mt-6 mx-auto lg:my-0">About</h2>
             </Link>
-            <h2 className="mt-6 mx-auto lg:my-0">Process</h2>
+            <Link to="/process">
+              <h2 className="col-span-1 mt-6 mx-auto lg:my-0">Process</h2>
+            </Link>
             <Link to="/paths">
-              <h2 className="mt-6 mx-auto lg:my-0">Paths</h2>
+              <h2 className="col-span-1 mt-6 mx-auto lg:my-0">Paths</h2>
             </Link>
-            <h2 className="mt-6 mx-auto lg:my-0">Services</h2>
-            <h2 className="mt-6 mx-auto lg:my-0">Testimonials</h2>
-            <h2 className="mt-6 mx-auto lg:my-0">Blog</h2>
+            <Link to="/services">
+              <h2 className="col-span-1 mt-6 mx-auto lg:my-0">Services</h2>
+            </Link>
+            <h2 className="col-span-1 mt-6 mx-auto lg:my-0">Blog</h2>
           </div>
         </div>
 
@@ -46,6 +49,6 @@ const Footer = () => {
       </footer>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;
